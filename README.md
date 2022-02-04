@@ -1,5 +1,6 @@
 # Esame-AI-Paoletti
-Progetto relativo all'esame di Intelligenza Artificiale.
+Progetto relativo all'esame di Intelligenza Artificiale dell'anno accademico 2021/22.
+Autore: Andrea Paoletti
 
 Il progetto consiste nell'implementazione dell'algoritmo di backtracking con forward checking e con MAC.
 L'elaborato consiste di quattro moduli sorgente: 
