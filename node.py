@@ -57,12 +57,12 @@ def connect_neighbour(x, lines):
             for s in lines:
                 # Se uno dei due nodi da collegare è uno dei nodi collegati da una retta s allora non la consideriamo come un'intersezione da evitare.
                 if s[1] != x and s[2] != x and s[1] != y and s[2] != y:
-                i = line.line_intersection(r, s[0])
-                if line.verify_intersection(i, x, y, s[1], s[2]):
-                    x.not_neighbours.remove(y)
-                    y.not_neighbours.remove(x)
-                    okay = False
-                    break
+                    i = line.line_intersection(r, s[0])
+                    if line.verify_intersection(i, x, y, s[1], s[2]):
+                        x.not_neighbours.remove(y)
+                        y.not_neighbours.remove(x)
+                        okay = False
+                        break
             if okay:
                 x.not_neighbours.remove(y)
                 y.not_neighbours.remove(x)
