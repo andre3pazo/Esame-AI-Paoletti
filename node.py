@@ -45,6 +45,8 @@ def select_closest(x):
     return closest
 
 
+# Le rette vengono memorizzate come una tripletta composta dalla coppia di coefficiente angolare e termine noto, primo estremo dell'arco
+# e secondo estremo dell'arco.
 def connect_neighbour(x, lines):
     loop = True
     while loop:
@@ -53,6 +55,8 @@ def connect_neighbour(x, lines):
         if y is not None:
             r = x.line_through_nodes(y)
             for s in lines:
+                # Se uno dei due nodi da collegare è uno dei nodi collegati da una retta s allora non la consideriamo come un'intersezione da evitare.
+                if s[1] != x and s[2] != x and s[1] != y and s[2] != y:
                 i = line.line_intersection(r, s[0])
                 if line.verify_intersection(i, x, y, s[1], s[2]):
                     x.not_neighbours.remove(y)
