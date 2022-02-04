@@ -2,6 +2,7 @@ import math
 
 
 # L'euristica MRV viene usata per selezionare il prossimo nodo da cui eseguire l'algoritmo backtrack.
+# Viene scelto il nodo con il dominio più piccolo.
 def mrv(unassigned_variables):
     min = math.inf
     next_value = None
